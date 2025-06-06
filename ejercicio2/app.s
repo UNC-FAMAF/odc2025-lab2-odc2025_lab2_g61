@@ -13,14 +13,17 @@ main:
  	mov x20, x0	// Guarda la dirección base del framebuffer en x20
 	//---------------- CODE HERE ------------------------------------
 
-	movz x10, 0xC7, lsl 16
-	movk x10, 0x1585, lsl 00
+  movz x1, 0xFF
+	movz x2, 0xF0
+	movz x3, 0xF0
+	movz x4, 0xF0
+	bl build_color
 
 	mov x2, SCREEN_HEIGH         // Y Size
 loop1:
 	mov x1, SCREEN_WIDTH         // X Size
 loop0:
-	stur w10,[x0]  // Colorear el pixel N
+	stur w4,[x0]  // Colorear el pixel N
 	add x0,x0,4	   // Siguiente pixel
 	sub x1,x1,1	   // Decrementar contador X
 	cbnz x1,loop0  // Si no terminó la fila, salto
@@ -46,8 +49,14 @@ loop0:
 	// efectivamente, su valor representará si GPIO 2 está activo
 	lsr w11, w11, 1
 
+  MOV X0, X20
+
 	//---------------------------------------------------------------
 	// Infinite Loop
 
 InfLoop:
-	b InfLoop
+	
+  bl odc
+  bl nose1
+
+  b InfLoop
