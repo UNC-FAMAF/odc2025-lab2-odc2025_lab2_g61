@@ -1,5 +1,9 @@
   .globl nose1
 nose1:
+
+  SUB    SP, SP, #16
+  STP    X29, X30, [SP]     // store old FP, old LR at [SP+0] and [SP+8]
+  MOV    X29, SP            // new frame pointer (not used here except to restore)
 	
 	movz x1, 0xFF
 	movz x2, 0xF0
@@ -210,6 +214,7 @@ nose1:
 	movz x9, 40
 	bl ellipse
 
+  LDP    X29, X30, [SP]     // restore old FP, old LR
+  ADD    SP, SP, #16
 
-
-	ret
+	RET

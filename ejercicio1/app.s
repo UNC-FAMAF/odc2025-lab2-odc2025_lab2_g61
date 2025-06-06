@@ -67,8 +67,6 @@ loop0:
   // BL rectangle
   //BL triangle_2
 
+  BL odc
   BL nose1
 
-InfLoop:
-  
-	b InfLoop
