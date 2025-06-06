@@ -92,6 +92,122 @@ mov x3, 360; mov x4, 300; BL dibujar_cuadrado
 mov x3, 240; mov x4, 340; BL dibujar_cuadrado
 mov x3, 360; mov x4, 340; BL dibujar_cuadrado
 
+// Letras ODC 2025 abajo a la izquierda
+movz w10, 0xFF, lsl 16      // Color blanco
+movk w10, 0xFFFF, lsl 0
+
+mov x1, 10       // ancho cuadrado
+mov x2, 10       // alto cuadrado
+
+mov x6, 0        // x inicial
+mov x7, 410      // y inicial (cerca del borde inferior, altura = 480)
+
+// ----------- Letra O -----------
+mov x3, x6;        mov x4, x7;        BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #10;   BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #20;   BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #30;   BL dibujar_cuadrado
+
+add x3, x6, #10;   mov x4, x7;        BL dibujar_cuadrado
+add x3, x6, #10;   add x4, x7, #30;   BL dibujar_cuadrado
+
+add x3, x6, #20;   mov x4, x7;        BL dibujar_cuadrado
+add x3, x6, #20;   add x4, x7, #10;   BL dibujar_cuadrado
+add x3, x6, #20;   add x4, x7, #20;   BL dibujar_cuadrado
+add x3, x6, #20;   add x4, x7, #30;   BL dibujar_cuadrado
+
+// ----------- Letra D -----------
+add x6, x6, #35
+
+mov x3, x6;        mov x4, x7;        BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #10;   BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #20;   BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #30;   BL dibujar_cuadrado
+
+add x3, x6, #10;   mov x4, x7;        BL dibujar_cuadrado
+add x3, x6, #10;   add x4, x7, #30;   BL dibujar_cuadrado
+
+add x3, x6, #20;   add x4, x7, #10;   BL dibujar_cuadrado
+add x3, x6, #20;   add x4, x7, #20;   BL dibujar_cuadrado
+
+// ----------- Letra C -----------
+add x6, x6, #35
+
+mov x3, x6;        mov x4, x7;        BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #10;   BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #20;   BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #30;   BL dibujar_cuadrado
+
+add x3, x6, #10;   mov x4, x7;        BL dibujar_cuadrado
+add x3, x6, #20;   mov x4, x7;        BL dibujar_cuadrado
+
+add x3, x6, #10;   add x4, x7, #30;   BL dibujar_cuadrado
+add x3, x6, #20;   add x4, x7, #30;   BL dibujar_cuadrado
+
+// ----------- Espacio -----------
+add x6, x6, #35
+
+// ----------- Número 2 -----------
+mov x3, x6;        mov x4, x7;        BL dibujar_cuadrado
+add x3, x6, #10;   mov x4, x7;        BL dibujar_cuadrado
+add x3, x6, #20;   mov x4, x7;        BL dibujar_cuadrado
+
+add x3, x6, #20;   add x4, x7, #10;   BL dibujar_cuadrado
+
+add x3, x6, #10;   add x4, x7, #20;   BL dibujar_cuadrado
+
+mov x3, x6;        add x4, x7, #30;   BL dibujar_cuadrado
+add x3, x6, #10;   add x4, x7, #30;   BL dibujar_cuadrado
+add x3, x6, #20;   add x4, x7, #30;   BL dibujar_cuadrado
+
+// ----------- Número 0 -----------
+add x6, x6, #35
+
+mov x3, x6;        mov x4, x7;        BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #10;   BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #20;   BL dibujar_cuadrado
+mov x3, x6;        add x4, x7, #30;   BL dibujar_cuadrado
+
+add x3, x6, #20;   mov x4, x7;        BL dibujar_cuadrado
+add x3, x6, #20;   add x4, x7, #10;   BL dibujar_cuadrado
+add x3, x6, #20;   add x4, x7, #20;   BL dibujar_cuadrado
+add x3, x6, #20;   add x4, x7, #30;   BL dibujar_cuadrado
+
+add x3, x6, #10;   add x4, x7, #30;   BL dibujar_cuadrado
+add x3, x6, #10;   mov x4, x7;        BL dibujar_cuadrado
+
+// ----------- Número 2 -----------
+add x6, x6, #35
+
+mov x3, x6;        mov x4, x7;        BL dibujar_cuadrado
+add x3, x6, #10;   mov x4, x7;        BL dibujar_cuadrado
+add x3, x6, #20;   mov x4, x7;        BL dibujar_cuadrado
+
+add x3, x6, #20;   add x4, x7, #10;   BL dibujar_cuadrado
+
+add x3, x6, #10;   add x4, x7, #20;   BL dibujar_cuadrado
+
+mov x3, x6;        add x4, x7, #30;   BL dibujar_cuadrado
+add x3, x6, #10;   add x4, x7, #30;   BL dibujar_cuadrado
+add x3, x6, #20;   add x4, x7, #30;   BL dibujar_cuadrado
+
+// ----------- Número 5 -----------
+add x6, x6, #35
+
+mov x3, x6;        mov x4, x7;        BL dibujar_cuadrado       // fila superior
+add x3, x6, #10;   mov x4, x7;        BL dibujar_cuadrado
+add x3, x6, #20;   mov x4, x7;        BL dibujar_cuadrado
+
+mov x3, x6;        add x4, x7, #10;   BL dibujar_cuadrado       // barra vertical izquierda
+
+mov x3, x6;        add x4, x7, #20;   BL dibujar_cuadrado       // fila intermedia
+add x3, x6, #10;   add x4, x7, #20;   BL dibujar_cuadrado
+add x3, x6, #20;   add x4, x7, #20;   BL dibujar_cuadrado
+
+add x3, x6, #10;   add x4, x7, #30;   BL dibujar_cuadrado       // fila inferior (centrada)
+add x3, x6, #20;   add x4, x7, #30;   BL dibujar_cuadrado
+
+
 // === ANIMACIÓN TRIÁNGULO BLANCO ===
 
 // Posición inicial
