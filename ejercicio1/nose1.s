@@ -119,36 +119,7 @@ nose1:
     movz x1, 0xFF; movz x2, 0xB5; movz x3, 0xCA; movz x4, 0xD5; bl build_color; add x5, x22, #30; add x8, x23, #30; movz x6, 30; movz x9, 30; bl triangle_1
 	movz x1, 0xFF; movz x2, 0xB5; movz x3, 0xCA; movz x4, 0xD5; bl build_color; mov x5, x22; add x8, x23, #30; movz x6, 30; movz x9, 30; bl triangle_0
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 	movz x1, 0xFF
