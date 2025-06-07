@@ -215,35 +215,56 @@ mov x19, 500       // X inicial
 mov x20, 0       // Y inicial
 
 anim_loop:
-    // === BORRAR triángulo con color del fondo ===
-    movz w10, 0xAF50, lsl 0      // Parte baja del color fondo
-    movk w10, 0x004C, lsl 16     // Parte alta => 0x004CAF50
-    mov x1, 40                   // base
-    mov x2, 2                    // repetición (altura)
-    mov x3, x19                  // X
-    mov x4, x20                  // Y
-    BL dibujar_triangulo
+    // === BORRAR triángulo 1 anterior ===
+    mov x3, x19
+    mov x4, x20
+    BL get_color_fondo
+    mov x1, 40
+    mov x2, 40
+    BL dibujar_cuadrado
 
-    // === ACTUALIZAR POSICIÓN Y ===
-    add x20, x20, 10             // mueve hacia abajo
-    cmp x20, 400                 // límite inferior (puede ajustar)
-    b.lt continuar_anim
-    mov x20, 0                 // vuelve arriba si se pasa
-continuar_anim:
+    // === BORRAR triángulo 2 anterior ===
+    mov x3, x22
+    mov x4, x23
+    BL get_color_fondo
+    mov x1, 40
+    mov x2, 40
+    BL dibujar_cuadrado
 
-    // === DIBUJAR triángulo blanco ===
+    // === ACTUALIZAR POSICIONES ===
+    add x20, x20, 10
+    cmp x20, 400
+    b.lt ok_t1
+    mov x20, 0
+ok_t1:
+
+    add x23, x23, 15   // este baja más rápido
+    cmp x23, 400
+    b.lt ok_t2
+    mov x23, 0
+ok_t2:
+
+    // === DIBUJAR triángulo 1 ===
     movz w10, 0xFFFF, lsl 0
-    movk w10, 0x00FF, lsl 16     // 0x00FFFFFF blanco
+    movk w10, 0x00FF, lsl 16
     mov x1, 40
     mov x2, 2
     mov x3, x19
     mov x4, x20
     BL dibujar_triangulo
 
-    // === Delay para ver la animación ===
+    // === DIBUJAR triángulo 2 ===
+    movz w10, 0x00FF, lsl 16  // R: FF0000
+    movk w10, 0x0000, lsl 0
+    mov x1, 40
+    mov x2, 2
+    mov x3, x22
+    mov x4, x23
+    BL dibujar_triangulo
+
+    // === Delay ===
     BL delay_corto
 
-    // Repetir animación
     b anim_loop
 
 // === Delay simple ===
@@ -262,6 +283,48 @@ calcular_pixel:
     lsl x0, x0, 2
     add x0, x0, x21
     ret
+
+redibujar_fondo:
+    mov x5, 0
+rf_loop_filas:
+    cmp x5, 12
+    b.ge rf_fin_fondo
+
+    mov x6, 0
+rf_loop_columnas:
+    cmp x6, 16
+    b.ge rf_fin_col
+
+    mov x0, x5
+    lsl x0, x0, 4
+    add x0, x0, x6
+    lsl x0, x0, 2
+
+    adrp x7, colores
+    add  x7, x7, :lo12:colores
+    add  x7, x7, x0
+    ldr  w10, [x7]
+
+    mov x3, x6
+    mov x4, x5
+    mov x0, CUADRADO_SIZE
+    mul x3, x3, x0
+    mul x4, x4, x0
+
+    mov x1, CUADRADO_SIZE
+    mov x2, CUADRADO_SIZE
+    BL dibujar_cuadrado
+
+    add x6, x6, 1
+    b rf_loop_columnas
+
+rf_fin_col:
+    add x5, x5, 1
+    b rf_loop_filas
+
+rf_fin_fondo:
+    ret
+
 
 dibujar_cuadrado:
     SUB SP, SP, 40
@@ -340,4 +403,21 @@ color_triangulo:
     LDR x15, [SP, 32]
     LDR x30, [SP, 40]
     ADD SP, SP, 48
-    ret 
+    ret
+    
+get_color_fondo:
+    // x3 = posX, x4 = posY
+    mov x5, CUADRADO_SIZE
+    udiv x6, x3, x5     // columna = posX / 40
+    udiv x7, x4, x5     // fila    = posY / 40
+
+    mov x0, x7
+    lsl x0, x0, 4       // fila * 16
+    add x0, x0, x6      // + columna
+    lsl x0, x0, 2       // * 4 bytes por pixel
+
+    adrp x8, colores
+    add  x8, x8, :lo12:colores
+    add  x8, x8, x0
+    ldr  w10, [x8]      // devuelve color en w10
+    ret
