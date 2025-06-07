@@ -4,7 +4,18 @@ nose1:
   SUB    SP, SP, #16
   STP    X29, X30, [SP]     // store old FP, old LR at [SP+0] and [SP+8]
   MOV    X29, SP            // new frame pointer (not used here except to restore)
-	
+
+  movz x1, 0xFF
+	movz x2, 0xF0
+	movz x3, 0xF0
+	movz x4, 0xF0
+	bl build_color
+  mov  x5, xzr
+  movz x6, 640
+  mov  x8, xzr
+  movz x9, 480
+  bl rectangle
+  
 	movz x1, 0xFF
 	movz x2, 0xF0
 	movz x3, 0x46

@@ -51,12 +51,27 @@ loop0:
 
   MOV X0, X20
 
+  mov x21, xzr
+  movz x23, 440
+
 	//---------------------------------------------------------------
 	// Infinite Loop
 
 InfLoop:
 	
-  bl odc
   bl nose1
+  bl odc
 
+  bl delay_largo
   b InfLoop
+
+delay_largo:
+    mov x11, #0x00400000
+    adds x21, x21, #1
+    cmp x21, x23
+    b.lt delay_loop2
+    mov x21, xzr
+delay_loop2:
+    subs  X11, X11, #1
+    b.ne  delay_loop2
+    ret
