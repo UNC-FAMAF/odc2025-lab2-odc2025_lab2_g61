@@ -14,9 +14,9 @@ main:
 	//---------------- CODE HERE ------------------------------------
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+ 	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 
 	mov x2, SCREEN_HEIGH         // Y Size
