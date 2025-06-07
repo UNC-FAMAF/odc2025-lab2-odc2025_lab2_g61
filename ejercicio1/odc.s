@@ -237,9 +237,9 @@ odc:
 	bl triangle_3
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 250
 	movz x6, 10
@@ -248,9 +248,9 @@ odc:
 	bl ellipse
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 250
 	movz x6, 10
@@ -259,9 +259,9 @@ odc:
 	bl ellipse
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 310
 	movz x6, 10
@@ -270,9 +270,9 @@ odc:
 	bl ellipse
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 310
 	movz x6, 10
@@ -292,9 +292,9 @@ odc:
 	bl rectangle
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 370
 	movz x6, 10
@@ -303,9 +303,9 @@ odc:
 	bl ellipse
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 370
 	movz x6, 10
@@ -314,9 +314,9 @@ odc:
 	bl ellipse
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 430
 	movz x6, 10
@@ -325,9 +325,9 @@ odc:
 	bl ellipse
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 490
 	movz x6, 10
@@ -336,9 +336,9 @@ odc:
 	bl ellipse
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 490
 	movz x6, 10
@@ -347,9 +347,9 @@ odc:
 	bl ellipse
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 550
 	movz x6, 10
@@ -358,9 +358,9 @@ odc:
 	bl ellipse
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 610
 	movz x6, 10
@@ -369,9 +369,9 @@ odc:
 	bl ellipse
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 540
 	movz x8, 430
@@ -380,9 +380,9 @@ odc:
 	bl triangle_1
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 510
 	movz x8, 440
@@ -391,9 +391,9 @@ odc:
 	bl triangle_2
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 390
 	movz x8, 440
@@ -402,9 +402,9 @@ odc:
 	bl triangle_2
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 420
 	movz x8, 430
@@ -413,9 +413,9 @@ odc:
 	bl triangle_1
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 360
 	movz x8, 430
@@ -424,9 +424,9 @@ odc:
 	bl rectangle
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 310
 	movz x8, 430
@@ -435,9 +435,9 @@ odc:
 	bl rectangle
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 300
 	movz x8, 420
@@ -446,9 +446,9 @@ odc:
 	bl rectangle
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 240
 	movz x8, 430
@@ -457,9 +457,9 @@ odc:
 	bl rectangle
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 380
 	movz x8, 430
@@ -468,9 +468,9 @@ odc:
 	bl rectangle
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 410
 	movz x8, 430
@@ -479,9 +479,9 @@ odc:
 	bl rectangle
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 530
 	movz x8, 430
@@ -490,9 +490,9 @@ odc:
 	bl rectangle
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 480
 	movz x8, 430
@@ -501,9 +501,9 @@ odc:
 	bl rectangle
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 600
 	movz x8, 420
@@ -512,9 +512,9 @@ odc:
 	bl rectangle
 
 	movz x1, 0xFF
-	movz x2, 0xF0
-	movz x3, 0xF0
-	movz x4, 0xF0
+	movz x2, 0xB5
+	movz x3, 0xCA
+	movz x4, 0xD5
 	bl build_color
 	movz x5, 590
 	movz x8, 440
