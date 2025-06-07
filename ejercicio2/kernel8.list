@@ -16495,7 +16495,7 @@ Disassembly of section .text:
    9012c:	17fffffd 	b	90120 <InfLoop>
 
 0000000000090130 <delay_largo>:
-   90130:	d2a0080b 	mov	x11, #0x400000              	// #4194304
+   90130:	d2a01e0b 	mov	x11, #0xf00000              	// #15728640
    90134:	b10006b5 	adds	x21, x21, #0x1
    90138:	eb1702bf 	cmp	x21, x23
    9013c:	5400004b 	b.lt	90144 <delay_loop2>  // b.tstop

@@ -66,7 +66,7 @@ InfLoop:
   b InfLoop
 
 delay_largo:
-    mov x11, #0x00400000
+    mov x11, #0x00f00000
     adds x21, x21, #1
     cmp x21, x23
     b.lt delay_loop2
